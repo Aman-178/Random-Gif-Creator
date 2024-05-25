@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Tag  from './Components/Tag';
+import Random from './Components/Random';
+import { toast,ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div id='aman'>
+      <header className="w-screen">
+        <h1 className="font-bold text-3xl bg-gradient-to-r from-red-500 via-green-900 to-yellow-900 text-black m-5 rounded-md flex justify-center items-center h-12">
+          Random GIFS
+        </h1>
       </header>
+      <Random/>
+      <Tag/>
+      <ToastContainer/>
     </div>
   );
 }
